@@ -1,0 +1,31 @@
+{
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug JavaScript",
+      "program": "${file}",
+      "console": "integratedTerminal"
+    },
+    {
+      "type": "java",
+      "request": "launch",
+      "name": "Debug Java Program (Internal Console)",
+      "mainClass": "${file}",
+      "console": "internalConsole"
+    },
+    {
+      "type": "java",
+      "request": "launch",
+      "name": "Debug Java Program (Integrated Terminal)",
+      "mainClass": "${file}",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Attach to .NET Functions",
+      "type": "coreclr",
+      "request": "attach",
+      "processId": "${command:azureFunctions.pickProcess}"
+    }
+  ]
+}
